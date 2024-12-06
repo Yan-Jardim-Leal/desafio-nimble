@@ -1,0 +1,229 @@
+
+<!-- saved from url=(0147)file:///C:/Users/Yan/Desktop/%E2%A0%80%E2%A0%80/Vida%20Real/yanleal/src/main/java/documentos/Algoritmo%20para%20valida%C3%A7%C3%A3o%20do%20CPF.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<title>Algoritmo para validação do CPF</title>
+</head>
+
+<body>
+
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
+<p style="color: #800080; margin-top: 1.5em; margin-bottom: 2px">
+<font color="#000080" size="5" face="Trebuchet MS"><strong>
+C #
+- Validando CNPJ , CPF e PIS</strong></font></p>
+
+<hr size="0">
+
+<p style="color: #800080; margin-top: 1.5em; margin-bottom: 2px">
+<font face="Trebuchet MS" size="5">Algoritmo de Validação do CPF</font></p>
+</span>
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Verdana, Tahoma, arial, sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); ">
+<p style="padding-top: 0px; padding-right: 0px; padding-bottom: 15px; padding-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-size: 12px; line-height: 20px; ">
+<br>
+<font face="Trebuchet MS">
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
+<font size="3">O algoritmo de validação do CPF calcula o primeiro dígito 
+verificador a partir dos 9 primeiros dígitos do CPF, e em seguida, 
+calcula o segundo dígito verificador a partir dos 9 (nove) primeiros dígitos do 
+CPF, mais o primeiro dígito, obtido na primeira parte.</font></span></font></p><font face="Trebuchet MS">
+<p style="line-height: 20px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 15px">
+Tomes como exemplo o CPF fictício : <strong>111.444.777-05</strong><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-weight: 700; background-color: rgb(255, 255, 255)">.</span></p>
+<p style="line-height: 20px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 15px">
+a -
+Cálculo do primeiro dígito</p>
+</font></span><font face="Trebuchet MS">
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
+</span></font><p style="line-height: 20px; margin: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; padding-bottom: 15px"><font face="Trebuchet MS">
+O primeiro passo é calcular o primeiro dígito verificador, e para isso, 
+separamos 
+os primeiros 9 dígitos do CPF (<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-weight: 700; background-color: rgb(255, 255, 255)">111.444.777</span><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">) 
+e multiplicamos cada um dos números, da<span class="Apple-converted-space">&nbsp;</span><strong>direita 
+para a esquerda</strong><span class="Apple-converted-space">&nbsp;</span>por números 
+crescentes a partir do número 2, como no exemplo abaixo:</span></font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="41%">
+  <tbody><tr>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">1</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">1</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">1</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">4</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">4</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">4</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">7</font></b></td>
+    <td width="11%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">7</font></b></td>
+    <td width="12%" align="center" bgcolor="#FFFFC1"><b>
+    <font face="Trebuchet MS">7</font></b></td>
+  </tr>
+  <tr>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>10</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>9</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>8</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>7</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>6</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>5</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>4</b></font></td>
+    <td width="11%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>3</b></font></td>
+    <td width="12%" align="center"><font color="#FF0000" face="Trebuchet MS"><b>2</b></font></td>
+  </tr>
+  <tr>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>10</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>9</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>8</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>28</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>24</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>20</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>28</b></font></td>
+    <td width="11%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>21</b></font></td>
+    <td width="12%" align="center"><font color="#0000FF" face="Trebuchet MS"><b>14</b></font></td>
+  </tr>
+</tbody></table>
+
+<p><font face="Trebuchet MS">Multiplicamos cada digito do CPF pelo respectivo número e somamos cada um dos 
+resultados : <b><font color="#0000FF">10+9+8+28+24+20+28+21+14 = 
+162</font></b></font></p>
+
+<p><font face="Trebuchet MS">Pegamos o resultado obtido<b> 162 e dividimos por 11</b>.&nbsp; Consideramos 
+como quociente apenas o valor inteiro. </font> </p>
+
+<p><b><font color="#0000FF" face="Trebuchet MS">162 / 11&nbsp; =&nbsp;&nbsp;&nbsp; 14&nbsp; 
+com resto 8&nbsp;&nbsp;&nbsp; </font></b></p>
+
+<p><font face="Trebuchet MS">- Se o resto da divisão for menor que 2, então o dígito é igual a <b>0 (Zero)</b>.<br>
+- Se o resto da divisão for maior ou igual a 2, então o dígito verificador é igual a 11 
+menos o resto da divisão <b>(11 - resto)</b>.</font></p>
+
+<p><font face="Trebuchet MS">No nosso exemplo temos que o resto é 8 então faremos<b> 11-8 = 3</b></font></p>
+
+<p><font face="Trebuchet MS">Logo o primeiro dígito verificador é 3. Então podemos escrever o CPF com os 
+dois dígitos calculados : &nbsp;<b>111.444.777-3X</b></font></p>
+
+<p><font face="Trebuchet MS">
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-weight: 700; background-color: rgb(255, 255, 255)">
+b -
+Cálculo do segundo dígito</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Trebuchet MS"><span lang="pt">Para&nbsp; 
+calcular o segundo dígito vamos usar o primeiro digito já calculado. Vamos 
+montar a mesma tabela de multiplicação usada no cálculo do primeiro dígito. Só 
+que desta vez usaremos na segunda linha os valores 11,10,9,8,7,6,5,4,3,2 já que 
+estamos incluindo mais um digito no cálculo(<i>o primeiro dígito calculado</i>):</span></font></p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="41%" height="68">
+  <tbody><tr>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>1</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>1</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>1</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>4</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>4</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>4</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>7</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>7</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>7</b></font></td>
+    <td width="10%" align="center" bgcolor="#FFFFC1" height="22">
+    <font face="Trebuchet MS"><b>3</b></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>11</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>10</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>9</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>8</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>7</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>6</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>5</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>4</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>3</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#FF0000" face="Trebuchet MS"><b>2</b></font></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>11</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>10</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>9</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>32</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>28</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>24</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>35</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>28</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>21</b></font></td>
+    <td width="10%" align="center" height="22">
+    <font color="#0000FF" face="Trebuchet MS"><b>6</b></font></td>
+  </tr>
+</tbody></table>
+<p class="MsoNormal" style="text-autospace: none">
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Trebuchet MS; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
+Novamente, efetuamos somamos o resultado da multiplicação :</span><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Trebuchet MS; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)"> 11 + 10 + 9 + 32 + 
+28 + 24 + 35 + 28 + 21 + 6</span><span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Trebuchet MS; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
+=<span class="Apple-converted-space">&nbsp;</span><strong>204 </strong></span></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Trebuchet MS"><span lang="pt">Dividimos o 
+total do somatório por 11 e consideramos o resto da divisão.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><b><span lang="pt">
+<font face="Trebuchet MS">204 / 11&nbsp; =&nbsp; 18&nbsp; e&nbsp; resto 6</font></span></b></p>
+<p class="MsoNormal" style="text-autospace: none">
+<span class="Apple-style-span" style="color: rgb(51, 51, 51); font-family: Trebuchet MS; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: 20px; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255)">
+Após obter o resto da divisão, precisamos aplicar a mesma regra que utilizamos 
+para obter o primeiro dígito:</span></p>
+
+<p><font face="Trebuchet MS">- Se o resto da divisão for menor que 2, então o dígito é igual a <b>0 (Zero)</b>.<br>
+- Se o resto da divisão for maior ou igual a 2, então o dígito é igual a 11 
+menos o resto da divisão <b>(11 - resto)</b>.</font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Trebuchet MS"><span lang="pt"><b>
+11-6= 5 </b>&nbsp; logo 5 é o nosso segundo dígito verificador.</span></font></p>
+<p class="MsoNormal" style="text-autospace: none"><font face="Trebuchet MS"><span lang="pt">Logo o nosso 
+CPF fictício será igual a <b>: <font color="#0000FF">111.444.777-35.</font></b></span></font></p>
+
+<hr size="0">
+
+<p align="center"><a href="http://www.macoratti.net/"><font size="2" face="Verdana">José Carlos Macoratti</font></a></p>
+
+
+
+<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>

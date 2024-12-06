@@ -6,14 +6,15 @@ public final class Usuario {
 	private String email;
 	
 	private String senha;
-	private int cpf;
+	private String cpf;
 	
-	public Usuario(String nome, String email, String senha, int cpf) {	
+	public Usuario(String nome, String email, String senha, String cpf) {	
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
 		this.cpf = cpf;
-	}	
+	}
+	
 	/*
  		Gerenciamento de Usuários - Cadastro de Usuário: - - 
 		Campos obrigatórios: Nome, CPF, e-mail e senha. 
