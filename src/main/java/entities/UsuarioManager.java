@@ -18,10 +18,30 @@ public final class UsuarioManager {
 		
 	}
 	
-	public static void getUser(Usuario user) {
-		// return user
+	public static Usuario getUser(Usuario user) {
+		// Procura no BD -> retorna o usuário caso encontrar
 		
+		return user;
+	}
+	
+	
+	private boolean verificarCredenciais(String credencial, String senha) {
 		
+		return false;
+	}
+	
+	public String loginCpf(String cpf, String senha) {
+		if (verificarCredenciais(cpf,senha) == false)
+			return null;
+		
+		return "token";
+	}
+	
+	public String loginEmail(String email, String senha) {
+		if (verificarCredenciais(email,senha) == false)
+			return null;
+		
+		return "token";
 	}
 	
 	public static boolean validarCPFExistente(char[] cpf) {
@@ -58,6 +78,7 @@ public final class UsuarioManager {
 		return cpfNumerico;
 	}
 	
+	//Mudar para Classe própria depois
 	private static String encriptarSenha(String senha) {
 		return senha;
 	}
