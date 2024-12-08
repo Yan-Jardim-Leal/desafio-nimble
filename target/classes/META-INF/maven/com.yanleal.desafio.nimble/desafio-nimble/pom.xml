@@ -9,6 +9,7 @@
   	<version>0.0.1-SNAPSHOT</version>
 	
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt-api</artifactId>
