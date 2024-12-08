@@ -14,20 +14,49 @@
 	</classpathentry>
 	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
 		<attributes>
+<<<<<<< HEAD
 			<attribute name="optional" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+=======
+<<<<<<< HEAD
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+=======
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
 		</attributes>
 	</classpathentry>
 	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
 		<attributes>
+<<<<<<< HEAD
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="test" value="true"/>
+=======
+<<<<<<< HEAD
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+=======
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="test" value="true"/>
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+			<attribute name="module" value="true"/>
+=======
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -36,5 +65,12 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+=======
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

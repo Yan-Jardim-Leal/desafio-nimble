@@ -2,6 +2,23 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<<<<<<< HEAD
+	
+=======
+<<<<<<< HEAD
+  
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.yanleal.desafio.nimble</groupId>
+  	<artifactId>desafio-nimble-2024</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+<<<<<<< HEAD
+  
+  	<dependencies>
+=======
+	
+	<dependencies>
+=======
 	
   	<modelVersion>4.0.0</modelVersion>
   	<groupId>com.yanleal.desafio.nimble</groupId>
@@ -9,6 +26,8 @@
   	<version>0.0.1-SNAPSHOT</version>
   
   	<dependencies>
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
 		<dependency>
 		    <groupId>io.jsonwebtoken</groupId>
 		    <artifactId>jjwt-api</artifactId>
@@ -21,12 +40,21 @@
     		<scope>runtime</scope>
 		</dependency>
 		<dependency>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
     		<groupId>io.jsonwebtoken</groupId>
     		<artifactId>jjwt-jackson</artifactId>
     		<version>0.12.6</version>
     		<scope>runtime</scope>
 		</dependency>
 		<dependency>
+<<<<<<< HEAD
+=======
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
         	<groupId>org.junit.jupiter</groupId>
         	<artifactId>junit-jupiter</artifactId>
         	<version>5.10.0</version>
@@ -34,5 +62,15 @@
     	</dependency>
 	
 	</dependencies>
+<<<<<<< HEAD
   
 </project>
+=======
+<<<<<<< HEAD
+
+</project>
+=======
+  
+</project>
+>>>>>>> e3af48a (Mensagem explicando a alteração)
+>>>>>>> b66ba61 (Quarto commit, gerador de tokens implementado)
