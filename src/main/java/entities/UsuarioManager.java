@@ -2,7 +2,6 @@ package entities;
 
 public final class UsuarioManager {
 	
-
 	private UsuarioManager() {}
 	
 	public static String cadastrarUsuario(String nome, String email, String senha, char[] cpf) {
