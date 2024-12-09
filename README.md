@@ -6,3 +6,7 @@ O tempo que eu acabei dedicando ao desafio foram aproximadamente 12 horas, no fi
 é uma vaga para desenvolvedor pleno, e não de estágio como eu inicialmente pensei.
 
 Embora o cargo pretendido fosse diferente, eu realmente gostei de aprender algumas soluções e fico feliz com o que aprendi!
+
+O projeto não foi finalizado, e confesso que não consegui absorver os conceitos da framework spring a tempo de finalizar o desafio, 
+portanto acabei até mesmo fugindo da proposta escrita nas condições utilizando Sql Connector por diversão,
+em relação aos cartões, suas respectivas funções não foram nem mesmo implementadas. Abraços!
