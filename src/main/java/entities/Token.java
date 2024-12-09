@@ -32,7 +32,8 @@ public final class Token {
     //# Verificar se um token é válido
     public static boolean validarToken(String token) {
         try {
-            Claims claims = Jwts.parser()
+            @SuppressWarnings("unused")
+			Claims claims = Jwts.parser()
                     .verifyWith(chave)
                     .build()
                     .parseSignedClaims(token)

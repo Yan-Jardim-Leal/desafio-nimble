@@ -39,6 +39,11 @@ public final class UsuarioManager {
 		return Token.gerarToken("");
 	}
 	
+	//Mudar para Classe própria depois
+	private static String encriptarSenha(String senha) {
+		return senha;
+	}
+	
 	public static boolean validarCPFExistente(char[] cpf) {
 		// Procura no BD -> retorna 'false' se não encontrar
 		
@@ -71,11 +76,6 @@ public final class UsuarioManager {
 			return null;
 		
 		return cpfNumerico;
-	}
-	
-	//Mudar para Classe própria depois
-	private static String encriptarSenha(String senha) {
-		return senha;
 	}
 	
 	private static int verificarCPFEtapa(char[] cpf, int maxIndex) {

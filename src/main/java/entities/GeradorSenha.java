@@ -32,3 +32,7 @@ public class GeradorSenha {
 	}
 	
 }
+
+/*
+ * 	Faço e ultilizo do melhor proveito da tabela ASCI
+*/

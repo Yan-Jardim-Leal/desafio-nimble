@@ -1,0 +1,25 @@
+version: '4.0'
+
+services:
+  db:
+    image: mysql:8.0      # Usando a imagem oficial do MySQL versão 8.0
+    container_name: desafio_nimble_db
+    environment:
+      MYSQL_ROOT_PASSWORD: admin       
+      MYSQL_DATABASE: yan_db           
+      MYSQL_USER: admin                
+      MYSQL_PASSWORD: admin            
+    ports:
+      - "3300:3300"                    # Expondo a porta 3306 para o MySQL
+    volumes:
+      - mysql_data:/var/lib/mysql      # Persistência de dados
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro  # Inicializa o banco com um script SQL
+    networks:
+      - desafio_nimble_network
+
+volumes:
+  mysql_data:   # Persistência dos dados no volume do Docker
+
+networks:
+  desafio_nimble_network:
+    driver: bridge
