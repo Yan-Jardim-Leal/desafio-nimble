@@ -1,5 +1,9 @@
 package entities;
 
+import java.sql.SQLException;
+
+import dao.UsuarioDao;
+
 public final class UsuarioManager {
 	
 	private UsuarioManager() {}
@@ -14,8 +18,15 @@ public final class UsuarioManager {
 			return "Já existe um usuário cadastrado com esse email/cpf";
 		
 		senha = encriptarSenha(senha);
-		return "Usuário cadastrado com sucesso!";
 		
+		Usuario user = new Usuario(nome,email,senha,cpf.toString());
+		try {
+			UsuarioDao.cadastrar(user);
+			return "Usuário cadastrado com sucesso!";
+		} catch (SQLException erro) {
+			System.out.println("Erro: "+erro);
+			return "Usuário não pode ser cadastrado!";
+		}
 	}
 	
 	public static Usuario getUser(Usuario user) {

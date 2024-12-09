@@ -14,7 +14,22 @@ public final class Usuario {
 		this.senha = senha;
 		this.cpf = cpf;
 	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
 	
+	public String getSenha() {
+		return senha;
+	}
 	/*
  		Gerenciamento de Usuários - Cadastro de Usuário: - - 
 		Campos obrigatórios: Nome, CPF, e-mail e senha. 
